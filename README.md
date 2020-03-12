@@ -1,7 +1,11 @@
 One Hundred Ideas for Computing
 ===
 
-This is a vision for how computing could be. I began writing ideas down a number of years ago, this is a selection of ideas old and new. My theme is integration.
+This is a vision for how computing could be. I began writing ideas down a number of years ago - you can find the origin of many of these ideas in [idea wiki](https://github.com/samsquire/idea-wiki) - this is a selection of ideas old and new. My theme is integration.
+
+* February 2020 [See ideas2, Another 85+ Ideas For Computing](https://github.com/samsquire/ideas2)
+* [See ideas3](https://github.com/samsquire/ideas3)
+* Please use the issues to discuss the ideas!
 
 Thank you to all the contributors who have been sending in examples and corrections!
 
@@ -70,56 +74,28 @@ Existing:
 
 ## 4. [Living Documents](id:living-documents)
 
-Blogs, forums, wikis and social networks solve variations of the same problem. Unfortunately they are not integrated enough. A blog post is not dynamic and flexible as it could be. Writing a post should allow me to take advantage of:
+Living documents are the idea of intra document CMS that features the insertability of arbitrary data formats and provides integrations between inserted content blocks. It's a general purpose data structure editor. A living document is the fusion of blogs, forums, wikis, social networks and notebook software.
 
- * Collecting arbitrary structured data from the recipient rather than just a freestyle comment box at the bottom of a document. Information can be collected *within* the article such as small call to action button buttons that when clicked add form fields for the user to contribute to.
- * Allow users to provide corrections such as spelling (wiki functionality)
- * Split up the document into reusable components (wiki like transclusion)
- * Rendering data in multiple ways
- 
-Examples:
+See my attempts to explain a living document:
 
-```
-A blogger is reviewing a number of products on an ongoing basis. The
-blogger creates a post for a given product category and headings for
-each offering. Attributes and ratings are placed in a bulleted list. The
-blogger endeavours to update the blog post whenever information changes
-regarding a product or when a new product is to be reviewed.
+* My implementation of living document software: https://github.com/samsquire/live-interface/blob/master/screencasts/screencast1.mp4?raw=true Very early.
+* See https://github.com/samsquire/liveinterface
+* Write up of some of the behaviour of a living document: https://github.com/samsquire/living-documents-writeup/blob/master/living-documents-writeup.md
+* Article on living documents: http://samsquire.github.io/livingdocuments/
 
-
-	- Ideally the blogger wants to display product attributes consistently
-	and update them from one place.
-	- Creating a summary of reviews at the bottom (without having to duplicate the information)
-	- Ask users for product suggestions, perhaps with an embedded form.
-	- The blogger wants to track the price or offers over time.
-	- Allow users to make comments regarding particular products or ratings. Allow users
-	to give their own ratings for an attribute.
-
-This blogger uses a HTML strikethrough to indicate that information has
-been updated in a blog. This is not transparent to the user. For
-information such as the price or a rating of a product over time, it
-will be difficult to see what the value was in the past and when it was
-changed. They may want to show a graph of the product ratings over time.
-
-The blogger wants a form of content management system for a single page with
-arbitrarily defined fields (product name, product facet, price, link to manufacturer etc).
-The living document is the interface to manipulate this information and append to it.
-``` 
-
-This document is an example of a living document. There is a reasonably consistent pattern of idea headings and a number of bulleted list following each. I should be able to rename all headings of the same type in one go (because they are connected) or create a new idea through the interface which will automatically create an idea heading and the bulleted lists.
 
 Existing:
 
  * [LightTable](http://www.lighttable.com/)
  * Google Wave
  * [Candle](http://candleapp.blogspot.co.uk/2011/06/why-i-invented-candle-i.html)
- * [.plan file](http://www.catb.org/jargon/html/P/plan-file.html)
 
 ## 5. [Life Engine](id:life-engine)
 
 Life engine is a dashboard that attempts to collect information about your life and display relevant data on a single screen.
 
  * pension performance
+ * health attributes
  * bank account balances
  * upcoming birthdays for friends
  * dream diary
@@ -133,7 +109,6 @@ Life engine is a dashboard that attempts to collect information about your life 
 Existing:
 
  * business dashboards 
- * [Locker Project](http://lockerproject.org/)
  * [Google Now](http://www.google.com/landing/now/)
  
  
@@ -221,7 +196,7 @@ Potential integration:
 Completing a task has a representation, such as 'render image' and if requested will select a program to do so depending on criteria. If the input data is in PNG format then it must pick a program representation that can render PNG. The inputs and outputs of programs are representations themselves so the type matching works upon programs themselves.
 
  * If an operation on a particular format has not been implemented but can be readily converted into a format that supports the operation, the system can follow a chain of conversions that allow an operation to be satisfied transparently. 
- * RC is akin to a program requesting a library that provides 'X' or 'can do X to Y' and having that library injected in. (see [representations are tests](#representations-are-tests))
+ * RC is akin to a program requesting a library that provides 'X' or 'can do X to Y' and having that library injected in. (see [representations are tests](https://github.com/samsquire/ideas#28-representations-are-tests))
  * There are many different ways of completing a task and they can be approached from different perspectives. Given a set of inputs and the intended goal, mappings or wrappers can provide for treating one representation as another but in a more formal way than industry practice. What something wraps and what programs are wrappers is in the heads of people and not known by the machine.
  * There needs to be some form of proof that two libraries will be interoperable. Representations as tests could provide this promise as a developer will import the representation of a task and any library promising to satisfy this representation would have to pass the tests dictated by the representation.
 
@@ -306,7 +281,6 @@ This is like the [Design This](#design-this) but in reverse. Designers create a 
 
 Existing:
 
- * [Things I want Made](http://thingsiwantmade.com/)
  * [Weekend Hacker](http://www.weekendhacker.net/)
 
 ## 16. "We Want This" (The Reverse Kickstarter)
@@ -323,7 +297,6 @@ This is like a 'reverse kickstarter' or a petition.
 Existing:
 
  * Kickstarter, in reverse
- * [Things I want Made](http://thingsiwantmade.com/)
  * [Quirky](http://www.quirky.com)
  * [Cofundos](http://cofundos.org/)
 
@@ -331,7 +304,7 @@ Existing:
 
 Bubble routing is an approach to detecting and handling events on the client side. Most frameworks do not use bubbling to its full potential, they create a handler for each area where an event needs to be handled and stop propagation once it has been handled. Bubble routing uses a single event handler by taking advantage of the natural structure of the DOM and bubbling. Each element the event passes through enhances the information of the request before it gets to the topmost level where the event is actually handled.
 
- * Example: http://fiddle.jshell.net/SWrX5/17/
+ * Example: https://jsfiddle.net/SWrX5/17/
 
 
 ## 18. Shortcut Format
@@ -354,7 +327,7 @@ Existing:
 
 These are some features for file exploring programs I have always wanted. Some already exist.
 
-When I right click a [representation of a file](#elements-represent-themselves) (such as an icon or a filename), I should be able to interact with the file or folder in a many different ways:
+When I right click a [representation of a file](https://github.com/samsquire/ideas/blob/master/README.md#9-elements-represent-themselves) (such as an icon or a filename), I should be able to interact with the file or folder in a many different ways:
 
  * `Put in New Folder` asks the user for a folder name and puts the selected files into this folder. The user does not have to create a new folder and manually move the files across. ([existing as Files 2 Folder](http://skwire.dcmembers.com/fp/?page=files-2-folder))
  * `Pull out of Folder` move the files in a folder out of the directory
@@ -817,7 +790,7 @@ Logging and exceptions can be useless in identifying errors because they do not 
 
 The embeddable widgets that platforms provide should be interchangeable and interoperable. Currently the choice of widget libraries is made by application developers rather than the user.
 
- * Text input edits should be configurable. It should be possible to choose what text editor to use for your applications. Perhaps you want to use advanced text editors or. 
+ * Textarea fields should be configurable. It should be possible to choose what text editor to use for your applications. Perhaps you want to use advanced text editors like vim or emacs.
  * Pick a calendar field editor.
  
 ## 41. Drill-down Interface
@@ -1125,6 +1098,7 @@ As a user of this site, I may begin by exploring:
 * Show existing projects or products that used this [ technology | category of technologies | architecture ]
 
 Existing:
+ * [Siftery](https://siftery.com/)
  * [StackShare](http://stackshare.io/)
  * WikiMatrix, ForumMatrix, Alternative.To
 
@@ -1176,9 +1150,9 @@ var ac = {
 ```
 
 ```
-ac("I click the search box");
-ac("this is my first time I've used the search box") &&
-ac("the text should be cleared")
+ac["I click the search box"];
+ac["this is my first time I've used the search box"] &&
+ac["the text should be cleared"]
 ```
 If the story's AC changes, the above test will fail because the test no longer matches the acceptance criteria. 
 
@@ -1272,7 +1246,6 @@ Open source bounties would be to implement a new feature or fix a bug.
 Existing:
 
  * [BountySource](https://www.bountysource.com/)
- * [cantincan](https://www.catincan.com/)
  * [Cofundos](http://cofundos.org/)
  * [FreedomSponsors](http://freedomsponsors.org/)
  
@@ -1604,7 +1577,7 @@ Existing:
 
  * [Portable Application Description files](https://en.wikipedia.org/wiki/Portable_Application_Description)
  * http://schema.org/SoftwareApplication
- * [SEON Ontologies](http://www.se-on.org/) [*](http://www.reddit.com/r/MachineLearning/comments/1dycyd/why_not_model_computer_programs_its_just_as_fun/#c9vc0qa)
+ * [SEON Ontologies](http://www.se-on.org/)
 
 ## 86. Friend Pipe
 
@@ -1837,7 +1810,7 @@ Example: A configuration file
  * Interfaces are written to visualize and edit representations.
  * Writing interfaces to interact with data needs to be as cheap as possible. It should be possible to knock up a configuration interface for a configuration file. For example, if the parse tree of a configuration file was exposed as a representation by an application, this would be much easier.
 
-Deployed applications on desktops preside in an impoverished environment compared to the environment that was used to create them. This makes installed desktop software inconsistent between installations and brittle. Various products bundle full-stack servers traditionally used on the server-side. These include web servers and databases. The provision and configuration of these servers should be no different to that used in cloud environments or in development. The desktop environment should be using provisioning tools such as Docker, Vagrant, Chef or Puppet behind the scenes. For example, installing a product that needs a MySQL database would use an existing running if installed and is of the correct version or will install a new copy. It's a complex engineering problem to make this possible, efficient and simple.
+Deployed applications on desktops preside in an impoverished environment compared to the environment that was used to create them. This makes installed desktop software inconsistent between installations and brittle. Various products bundle full-stack servers traditionally used on the server-side. These include web servers and databases. The provision and configuration of these servers should be no different to that used in cloud environments or in development. The desktop environment should be using provisioning tools such as Docker, Vagrant, Chef or Puppet behind the scenes. For example, installing a product that needs a MySQL database would use an existing running tool if installed and is of the correct version or will install a new copy. It's a complex engineering problem to make this possible, efficient and simple.
 
 Example:
 
@@ -1855,7 +1828,6 @@ Integration:
 
 Existing:
 
- * [Aurajs](http://aurajs.com/)
  * COM/OLE Linking
  * Firebug, Chrome development tools
  * Microsoft MMC Snapins
@@ -1869,7 +1841,7 @@ A directory can be domain specific and relevant to the types of files displayed.
 
 ![Application portal](https://raw.github.com/samsquire/ideas/master/systemviewer_mergedisplay.PNG "Application portal")
 
- * In many file managers where folders appear first and there are many folders, no files can be seen. Folders and files could be arranged in a way that makes files and folders obvious immediately. Directories could be positioned along the top and down the right-hand side to make a `-|` shape to avoid the situation where only folders can be seen without scrolling down. This could then be sticky as the user scrolls down so that the user can always access folders.
+ * In many file managers where folders appear first and there are many folders, no files can be seen. Folders and files could be arranged in a way that makes files and folders obvious immediately. Directories could be positioned along the top and down the right-hand side to make a `L` shape to avoid the situation where only folders can be seen without scrolling down. This could then be sticky as the user scrolls down so that the user can always access folders.
  * Icons are scaled according to relative importance in the directory.
  * The background colors are arbitrary coloured to group certain files, perhaps with titles. A packing algorithm can a ensure that certain icons get arranged together in a pleasant way without breaking the uniform appearance of the icons.
 
@@ -1905,3 +1877,7 @@ Existing:
 
  * Applescript and Services
  * [Zapier](http://zapier.com/)
+ 
+ # More ideas
+ 
+ There's another [101 ideas in Another 85+ Ideas for Computing on my Github](https://github.com/samsquire/ideas2).
