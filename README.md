@@ -1,11 +1,21 @@
 One Hundred Ideas for Computing
 ===
 
-This is a vision for how computing could be. I began writing ideas down a number of years ago - you can find the origin of many of these ideas in [idea wiki](https://github.com/samsquire/idea-wiki) - this is a selection of ideas old and new. My theme is integration.
+This is a vision for how computing could be. I began writing ideas down a number of years ago - you can find the origin of many of these ideas in [idea wiki](https://github.com/samsquire/idea-wiki) - there is over 1000 pages in my idea wiki - this document though is a selection of ideas old and new. My theme is integration.
 
-* February 2020 [See ideas2, Another 85+ Ideas For Computing](https://github.com/samsquire/ideas2)
-* [See ideas3](https://github.com/samsquire/ideas3)
+* February 2020 [Please see ideas2, Another 85+ Ideas For Computing](https://github.com/samsquire/ideas2) I think they're even better than this batch of ideas!
+* [See ideas3](https://github.com/samsquire/ideas3) I think they're even better than ideas2!
+* [See ideas4](https://GitHub.com/samsquire/ideas4)
+* If you like my ideas, please don't hesitate to contact me and chat about them! If you want me to evaluate one of your ideas, I can help!
 * Please use the issues to discuss the ideas!
+* [Follow me on twitter](HTTPS://twitter.com/mrsamuelsquire)
+* You don't have to read these ideas in order, you can jump about.
+* Looking for business ideas? Checkout my [startups repository](https://github.com/samsquire/startups) where I list business ideas.
+* [Chinese translation](https://www.oschina.net/translate/one-hundred-ideas-for-computing)
+
+
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+
 
 Thank you to all the contributors who have been sending in examples and corrections!
 
@@ -78,7 +88,7 @@ Living documents are the idea of intra document CMS that features the insertabil
 
 See my attempts to explain a living document:
 
-* My implementation of living document software: https://github.com/samsquire/live-interface/blob/master/screencasts/screencast1.mp4?raw=true Very early.
+* A screencast of my implementation of living document software: https://github.com/samsquire/live-interface/blob/master/screencasts/screencast1.mp4?raw=true Very early.
 * See https://github.com/samsquire/liveinterface
 * Write up of some of the behaviour of a living document: https://github.com/samsquire/living-documents-writeup/blob/master/living-documents-writeup.md
 * Article on living documents: http://samsquire.github.io/livingdocuments/
@@ -144,7 +154,7 @@ Existing:
 
 Command auto-complete could be implemented by:
 
- * indexing the man pages to extract documentation for the arguments of every command
+ * indexing the man pages to extract documentation for the arguments of every command.
  * typing a command begins a searches the index for arguments and either displays completion of the argument and/or provides a documentation panel for that argument.
  * or applications expose what they provide (see [representational computing](#representational-computing))
 
@@ -157,6 +167,7 @@ Existing:
 
  * [Fish Shell](http://fishshell.com/)
  * [Finalterm](http://finalterm.org/)
+ * [sh-manpage-completions for bash/zsh](https://github.com/nevesnunes/sh-manpage-completions) using fish-shell's create_manpage_completions.py on GitHub
 
 Potential integrations:
 
@@ -1078,7 +1089,7 @@ assertions: {
 }
 ```
 
-A page in a web application can be modelled as its own API of user behaviour.
+A page in a web application can have a Javascript API that reflects the expected user usage pattern.
 
 
 ## 54. [Community Idea: Tech Stack Slice](id:tech-stack-slice)
